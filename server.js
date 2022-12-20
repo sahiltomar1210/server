@@ -8,5 +8,8 @@ app.use(bodyParser());
 app.get("/data",(req,res)=>{
     res.status(200).json({data})
 })
+app.get("*",(req,res)=>{
+    res.send("NO DATA")
+})
 
 app.listen(3004,()=>console.log("server is running at 3004"));
